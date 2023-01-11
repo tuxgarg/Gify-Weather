@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+}
+
+    p{
+        text-align: center;
+        color: rgba(238, 238, 238, 0.827);
+        font-weight: 500;
+        font-size: 115%;
+    }
+
+    .NFChild{
+        width: 62px;
+        background-color: rgba(2, 2, 2, 0.366);
+    }
+
+    #status{
+        color: rgba(238, 238, 238, 0.827);
+    }
+    .nextForecast{
+        border-radius: 5px;
+    }
+    body{
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    </style>
+</head>
+<body style="width: 280px;border-radius: 10px;">
+    <div style="display: flex;">
+        <h1 style="vertical-align:middle;margin: 25px 5px;" id="status"></h1>
+        <img style="width: 110px;position: absolute;top: 0;right: 0;" src="" id="myImg" >
+    </div>
+    
+    <p id="btn" style="display: none;">Find</p>
+    <p style="font-size: 20px;font-weight: 400;margin: 40px 0 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; " id="temp">Temperature</p>
+    <p style="font-size: 20px;font-weight: 400;margin: 20px 0; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; " id="wind">Wind Speed</p>
+    <div class="nextForecast" style="display: flex;">
+        
+            <div class="NFChild" style="border-top-left-radius: 10px;border-bottom-left-radius: 10px">
+                <img src="/icons/77.png" alt="" style="width: 50px;">
+                <p>22 °C</p>
+                <p>Tomorrow</p>
+            </div>
+            <div class="NFChild">
+                <img src="/icons/77.png" alt="" style="width: 50px;">
+                <p>22 °C</p>
+                <p>Date</p>
+            </div>
+            <div class="NFChild">
+                <img src="/icons/77.png" alt="" style="width: 50px;">
+                <p>22 °C</p>
+                <p>Date</p>
+            </div>
+            <div class="NFChild">
+                <img src="/icons/77.png" alt="" style="width: 50px;">
+                <p>22 °C</p>
+                <p>Date</p>
+            </div>
+            <div class="NFChild" style="border-top-right-radius: 10px;border-bottom-right-radius: 10px">
+                <img src="/icons/77.png" alt="" style="width: 50px;">
+                <p>22 °C</p>
+                <p>Date</p>
+            </div>
+        
+    </div>
+    <script src="/app.js"></script>
+</body>
+</html>
