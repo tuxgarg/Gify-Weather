@@ -1,7 +1,7 @@
 {
-    "name": "weather extension",
+    "name": "Gify Weather",
     "description": "Knowing weather made attractive. Get the weather reports in form of awesome GIF images",
-    "version": "0.0.1",
+    "version": "0.1",
     "manifest_version": 3,
     "action": {
         "default_popup": "popup.html",
