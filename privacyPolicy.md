@@ -4,8 +4,6 @@ Here's a privacy policy for your "Gify Weather" Chrome extension:
 
 # Privacy Policy
 
-**Effective Date:** [Insert Date]
-
 ## Introduction
 
 Welcome to the Gify Weather Chrome extension. Your privacy is important to us, and this Privacy Policy outlines how we collect, use, and protect your information. By using Gify Weather, you agree to the practices described in this policy.
@@ -39,7 +37,3 @@ We may update this Privacy Policy from time to time. Any changes will be reflect
 ## Contact Us
 
 If you have any questions or concerns regarding this Privacy Policy or the practices of Gify Weather, please contact us through the [Chrome Web Store page](https://chromewebstore.google.com/detail/gify-weather/lmncbgnpbohknfenkhhdadojklhkaohl).
-
----
-
-This privacy policy is designed to comply with general privacy regulations and best practices. However, it's always a good idea to consult with a legal professional to ensure it fully complies with relevant laws and regulations.

@@ -4,8 +4,6 @@ Here's a README for your "Gify Weather" Chrome extension:
 
 # Gify Weather
 
-![Gify Weather Logo](logo.png)
-
 ## Overview
 
 **Gify Weather** is a Chrome extension that makes checking the weather both informative and fun! Instead of just numbers and symbols, Gify Weather provides you with weather reports in the form of awesome GIF images. Get the latest weather updates with a touch of creativity and enjoy the visual experience.
@@ -34,9 +32,6 @@ Here's a README for your "Gify Weather" Chrome extension:
 - **Geolocation**: Used to determine your current location for weather updates.
 - **Storage**: Used to store settings and preferences locally on your device.
 
-## Screenshots
-
-![Popup Screenshot](popup.png)
 
 ## License
 
@@ -45,7 +40,3 @@ This extension is licensed under the MIT License. See the LICENSE file for more 
 ## Support
 
 If you encounter any issues or have suggestions for improvement, please visit the [Chrome Web Store page](https://chromewebstore.google.com/detail/gify-weather/lmncbgnpbohknfenkhhdadojklhkaohl) and leave a review or contact the developer.
-
----
-
-Feel free to customize this further according to your needs!
