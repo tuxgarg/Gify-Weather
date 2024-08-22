@@ -1,83 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="background-color: #00000000">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        * {
-  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Opera and Firefox */
-}
-
-    p{
-        text-align: center;
-        color: rgba(238, 238, 238, 0.827);
-        font-weight: 500;
-        font-size: 115%;
-    }
-
-    .NFChild{
-        width: 62px;
-        background-color: rgba(2, 2, 2, 0.366);
-    }
-
-    #status{
-        color: rgba(238, 238, 238, 0.827);
-    }
-    .nextForecast{
-        border-radius: 5px;
-    }
-    body{
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-    </style>
+    <link rel="stylesheet" href="/styles.css">
+    <title>Gify Weather</title>
 </head>
-<body style="width: 280px;border-radius: 10px;">
-    <div style="display: flex;">
-        <h1 style="vertical-align:middle;margin: 25px 5px;" id="status"></h1>
-        <img style="width: 110px;position: absolute;top: 0;right: 0;" src="" id="myImg" >
+
+<body style="width: 320px; padding: 0;margin: 0; background-color: #00000000">
+
+    <div class="container-style show-flex" id="loading-div">
+        <div class="loading-message">
+            <span style="color: #ffffff;">Fetching Weather Info</span>
+            <div class="dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+        <div class="wind-gauge-loader">
+            <div class="wind-gauge">
+                <div class="needle"></div>
+            </div>
+        </div>
+        <h1></h1>
     </div>
-    
-    <p id="btn" style="display: none;">Find</p>
-    <p style="font-size: 20px;font-weight: 400;margin: 40px 0 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; " id="temp">Temperature</p>
-    <p style="font-size: 20px;font-weight: 400;margin: 20px 0; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; " id="wind">Wind Speed</p>
-    <div class="nextForecast" style="display: flex;">
-        
+
+    <div class="popup-container hide" id="content-div">
+        <img src="/icons/settings.png" alt="Settings" id="settingsBtn" >
+        <div style="display: flex; justify-content: space-between;">
+            <h1 style="vertical-align:middle; max-width: 70%; padding-left: 3%;" id="status"></h1>
+            <div style="padding: 0 3%; width: 30%; display: flex; align-items: center;">
+                <img style="width: 100%;" src="" id="myImg">
+            </div>
+        </div>
+
+        <p id="btn" style="display: none;">Find</p>
+        <p style="font-size: 20px;font-weight: 500;margin: 20px 0 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; "
+            id="temp">Temperature</p>
+        <p style="font-size: 20px;font-weight: 500;margin: 20px 0; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; "
+            id="wind">Wind Speed</p>
+        <div class="nextForecast" style="display: flex;">
             <div class="NFChild" style="border-top-left-radius: 10px;border-bottom-left-radius: 10px">
-                <img src="/icons/77.png" alt="" style="width: 50px;">
+                <img src="/icons/77.png" alt="" class="next-images">
                 <p>22 °C</p>
                 <p>Tomorrow</p>
             </div>
             <div class="NFChild">
-                <img src="/icons/77.png" alt="" style="width: 50px;">
+                <img src="/icons/77.png" alt="" class="next-images">
                 <p>22 °C</p>
                 <p>Date</p>
             </div>
             <div class="NFChild">
-                <img src="/icons/77.png" alt="" style="width: 50px;">
+                <img src="/icons/77.png" alt="" class="next-images">
                 <p>22 °C</p>
                 <p>Date</p>
             </div>
             <div class="NFChild">
-                <img src="/icons/77.png" alt="" style="width: 50px;">
+                <img src="/icons/77.png" alt="" class="next-images">
                 <p>22 °C</p>
                 <p>Date</p>
             </div>
             <div class="NFChild" style="border-top-right-radius: 10px;border-bottom-right-radius: 10px">
-                <img src="/icons/77.png" alt="" style="width: 50px;">
+                <img src="/icons/77.png" alt="" class="next-images">
                 <p>22 °C</p>
                 <p>Date</p>
             </div>
-        
+
+        </div>
     </div>
-    <script src="/app.js"></script>
+    <div class="container-style settings-specific hide" id="settings">
+        <div style="padding-bottom: 5%;">
+            <img src="/icons/back.png" alt="Close" id="closeSettings" style="width: 30px; cursor: pointer; margin: 10px 10px 0 0;">
+        </div>
+        <h1 style="margin-top: 0; color: #ffffff;">Settings</h1>
+        
+        <div class="settings-group">
+            <h2>Temperature Unit</h2>
+            <div class="switch-container">
+                <span class="switch-label">Celsius</span>
+                <label class="switch">
+                    <input type="checkbox" id="tempSwitch" name="temperature" value="celsius">
+                    <span class="slider"></span>
+                </label>
+                <span class="switch-label">Fahrenheit</span>
+            </div>
+        </div>
+        
+        <div class="settings-group">
+            <h2>Wind Speed Unit</h2>
+            <div class="switch-container">
+                <span class="switch-label">km/hr</span>
+                <label class="switch">
+                    <input type="checkbox" id="windspeedSwitch" name="windspeed" value="km/hr">
+                    <span class="slider"></span>
+                </label>
+                <span class="switch-label">m/s</span>
+            </div>
+        </div>
+    </div>
 </body>
+<script src="/app.js"></script>
+
 </html>
