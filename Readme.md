@@ -1,7 +1,3 @@
-Here's a README for your "Gify Weather" Chrome extension:
-
----
-
 # Gify Weather
 
 ## Overview
